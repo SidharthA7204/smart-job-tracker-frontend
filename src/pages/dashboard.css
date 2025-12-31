@@ -1,0 +1,300 @@
+/* ================= GLOBAL ================= */
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f8f9fa;
+  color: #202124;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* 🔒 IMPORTANT: prevents input/select size jumping */
+input,
+select {
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 32px;
+  margin: 0;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.section-title {
+  margin: 32px 0 16px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* ================= FILTERS ================= */
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* ✅ FIXED INPUT & SELECT (NO JUMP, NO STRETCH) */
+.filters input,
+.filters select,
+.job-card input,
+.job-card select,
+.add-job-form input,
+.add-job-form select {
+  height: 44px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 999px;
+  color: #000;
+
+  box-sizing: border-box;
+}
+
+/* ✅ FIX select dropdown behavior */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Focus */
+.filters input:focus,
+.filters select:focus,
+.job-card input:focus,
+.job-card select:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+/* ================= STATS ================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 24px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.stat-card span {
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 26px;
+  margin-top: 6px;
+}
+
+/* ================= CHARTS ================= */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.15);
+}
+
+/* ================= JOB CARDS ================= */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.job-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+}
+
+.job-card h3 {
+  font-size: 18px;
+}
+
+.job-card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ================= BUTTONS ================= */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actions button {
+  flex: 1;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #1a73e8;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button.ghost {
+  background: #ffffff;
+  color: #1a73e8;
+  border: 1px solid #dadce0;
+}
+
+button.danger {
+  background: #ea4335;
+}
+
+/* ================= AI ================= */
+.ai-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  animation: pulse 1.2s infinite;
+}
+
+.ai-result {
+  margin-top: 10px;
+  background: #f1f6ff;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  animation: fadeIn 0.4s ease;
+}
+
+.ai-result ul {
+  padding-left: 18px;
+}
+
+/* ================= EMPTY ================= */
+.empty {
+  opacity: 0.7;
+  margin-top: 16px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .page-title {
+    font-size: 26px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid,
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .ai-result {
+    font-size: 13px;
+  }
+}

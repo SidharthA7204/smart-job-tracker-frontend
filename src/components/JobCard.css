@@ -1,0 +1,100 @@
+.job-card {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.job-position {
+  margin: 8px 0 12px;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.applied {
+  background: #2d6cdf;
+  color: white;
+}
+
+.status.interview {
+  background: #fbbc04;
+  color: black;
+}
+
+.status.offer {
+  background: #34a853;
+  color: white;
+}
+
+.status.rejected {
+  background: #ea4335;
+  color: white;
+}
+
+.status-select {
+  width: 100%;
+  margin-bottom: 12px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.actions .danger {
+  background: #ea4335;
+  color: white;
+}
+
+.actions .ghost {
+  background: transparent;
+  color: #ccc;
+  border: 1px solid #444;
+}
+
+.edit-input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: white;
+}

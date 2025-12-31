@@ -1,0 +1,31 @@
+.ai-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+.ai-form textarea {
+  width: 100%;
+  min-height: 140px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.ai-form button {
+  background: #1a73e8;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ai-result-card {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
