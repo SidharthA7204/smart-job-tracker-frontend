@@ -34,6 +34,14 @@ The backend for this project is developed separately using Node.js, Express, and
 
 ## 🔌 API Integration
 The frontend connects to a deployed backend using environment variables.
-
-```env
 VITE_API_URL=https://smart-job-tracker-backend-pah5.onrender.com/api
+
+## 👤 Author
+
+Sidharth A  
+- GitHub: https://github.com/SidharthA7204  
+- LinkedIn: www.linkedin.com/in/sidhartha742003
+
+Open to opportunities
+
+
