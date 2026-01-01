@@ -2,7 +2,13 @@
 
 A production-ready **React frontend** for managing and tracking job applications with authentication and dashboard analytics.
 
+
 🌐 **Live Demo:** https://smart-job-tracker-frontend.vercel.app
+## Backend Repository
+
+The backend for this project is developed separately using Node.js, Express, and MongoDB.
+🔗 Backend Repo: https://github.com/SidharthA7204/smart-job-tracker-backend
+
 
 ---
 
